@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --font: "Inter", sans-serif;
+  --primary-100: #F26CF9;
+  --primary-90: #F589FA;
+  --primary-50: #FCD3FE;
+  --primary-40: #FCE2FE;
+  --primary-30: #FDEDFE;
+  --secondary-110: #1C2346;
+  --secondary-100: #37437D;
+  --secondary-90: #5562A2;
+  --secondary-70: #707DBF;
+  --secondary-60: #ABB4DD;
+  --secondary-50: #D3DAF9;
+  --yellow-100: #FFCA39;
+  --yellow-90: #FFEFC3;
+  --grey-10: #FFFFFF;
+  --grey-20: #F7F7F7;
+  --grey-30: #EDEDED;
+  --grey-40: #E0E0E1;
+  --grey-50: #C3C3C4;
+  --grey-60: #9F9FA1;
+  --grey-70: #777779;
+  --grey-80: #636365;
+  --grey-90: #434345;
+  --grey-100: #1E1E20;
+  --cool-grey-10: #EEEFFF;
+  --cool-grey-20: #E4E5F5;
+  --cool-grey-30: #DDDEED;
+  --cool-grey-40: #D1D2E0;
+  --cool-grey-50: #B0B1BD;
+  --cool-grey-60: #8F8F99;
+  --cool-grey-70: #72737A;
+  --cool-grey-80: #56565C;
+  --cool-grey-90: #39393D;
+  --cool-grey-100: #131314;
+  --headline-clr: var(--secondary-100);
+  --text-clr: var(--grey-100);
+  --text-muted-clr: var(--cool-grey-60);
+  --bg-clr: var(--cool-grey-10);
+  --nav-bg-clr: var(--cool-grey-20);
+  --header-bg-clr: var(--grey-20);
+  --main-bg-clr: var(--grey-20);
+  --footer-bg-clr: var(--grey-20);
+  --section-bg-clr: var(--grey-20);
+  --border-clr: var(--grey-40);
+  --separator-border-clr: var(--grey-40);
+  --separator-text-clr: var(--grey-60);
+  --separator-bg-clr: var(--grey-10);
+  --link-clr: var(--primary-100);
+  --link-hover-clr: var(--primary-90);
+  --card-bg-clr: var(--grey-10);
+  --card-border-clr: var(--grey-20);
+  --btn-text-clr: var(--grey-90);
+  --btn-border-clr: transparent;
+  --btn-bg-clr: transparent;
+  --btn-hover-text-clr: var(--grey-90);
+  --btn-hover-border-clr: transparent;
+  --btn-hover-bg-clr: transparent;
+  --btn-link-text-clr: var(--primary-100);
+  --btn-link-border-clr: transparent;
+  --btn-link-bg-clr: transparent;
+  --btn-link-hover-text-clr: var(--primary-100);
+  --btn-link-hover-border-clr: transparent;
+  --btn-link-hover-bg-clr: transparent;
+  --btn-primary-text-clr: var(--grey-10);
+  --btn-primary-border-clr: var(--primary-100);
+  --btn-primary-bg-clr: var(--primary-100);
+  --btn-primary-hover-text-clr: var(--grey-10);
+  --btn-primary-hover-border-clr: var(--primary-90);
+  --btn-primary-hover-bg-clr: var(--primary-90);
+  --btn-secondary-text-clr: var(--secondary-100);
+  --btn-secondary-border-clr: var(--cool-grey-10);
+  --btn-secondary-bg-clr: var(--cool-grey-10);
+  --btn-outline-text-clr: var(--grey-90);
+  --btn-outline-border-clr: var(--grey-30);
+  --btn-outline-bg-clr: transparent;
+  --input-bg-clr: var(--grey-10);
+  --input-border-clr: var(--grey-40);
+  --input-border-focus-clr: var(--primary-50);
+  --input-text-clr: var(--grey-100);
+  --input-placeholder-clr: var(--grey-50);
+  --checkbox-bg-clr: var(--grey-10);
+  --checkbox-border-clr: var(--grey-40);
+  --checkbox-checked-bg-clr: var(--primary-100);
+  --checkbox-checked-border-clr: var(--primary-100);
+  --checkbox-checked-text-clr: var(--grey-10);
+}
+
+html, body {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: var(--font);
+  color: var(--text-clr);
+  background-color: var(--bg-clr);
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.portal-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "nav" "main" "footer";
+  height: 100dvh;
+
+  @media (min-width >= 768px){
+      grid-template-columns: 80px 1fr;
+      grid-template-areas: "nav header" "nav main" "nav footer";
+
+  }
+  @media (min-width >= 1400px) {
+      grid-template-columns: 250px 1fr;
+      grid-template-areas: "nav header" "nav main" "nav footer";
+  }
+
+}
+
+nav {
+  grid-area: nav;
+  background-color: var(--nav-bg-clr);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--header-bg-clr);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--main-bg-clr);
+  border-radius: 1rem;
+  padding: 1.5rem;
+
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--footer-bg-clr);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
