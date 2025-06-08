@@ -2,7 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer>Footer</footer>
+    <footer>
+      <p>© 2025 Ventixe. All rights reserved.</p>
+    </footer>
   )
 }
 
